@@ -1,0 +1,183 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: block;
+}
+
+.flex-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.flex-container, .logo {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.sidebar {
+    background-image: url("../images/background-image.jpg");
+    background-position: center;
+    background-size: 100vh;
+    background-repeat: no-repeat;
+    width: 40vw;
+    z-index: 1;
+}
+
+.logo {
+    height: auto;
+    background-color: rgb(0, 0, 0, 0.6);
+    position: relative;
+    top: 41.7vh;
+    gap: 1vw;
+    padding: 15px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h1 {
+    color: white;
+    font-size: 3rem;
+    animation: 1.2s ease-out 0s 1 slideInFromLeft;
+}
+
+.main-content {
+    width: 60vw;
+    background-color: black;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+form {
+    animation: 1.2s ease-out 0s 1 slideInFromRight;
+}
+
+.right {
+    padding-left: 3vw;
+}
+
+.content-text {
+    font-weight: 500;
+    width: 90%;
+    font-size: 1.5rem;
+    animation: 1.2s ease-out 0s 1 slideInFromTop;
+}
+.remote-text {
+    margin: 40px 0 80px;
+}
+
+.form {
+    background-color: rgb(6, 6, 6);
+    box-shadow: 0 15px 15px -3px rgb(160, 0, 0);
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.form-title {
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.input {
+    display: flex;
+    flex-flow: column wrap;
+    width: 40%;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    opacity: 50%;
+}
+
+label {
+    cursor: pointer;
+}
+
+input {
+    background-color: rgb(2, 2, 2);
+    border: 1px solid rgb(77, 77, 77);
+    border-radius: 3px;
+    padding: 1px 2px;
+    outline: none;
+}
+
+input:focus {
+    border: 2px solid rgb(215, 234, 255);
+    -webkit-transition: 0.3s ease-in;
+}
+
+button {
+    background-color: black;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border: 3px solid rgb(226, 31, 5);
+    border-radius: 10px;
+    padding: 10px 40px;
+    margin: 40px 0;
+}
+
+button:hover {
+    background-color: rgb(226, 31, 5);
+    -webkit-transition: 0.2s ease-in;
+
+}
+
+.log-in {
+    display: flex;
+    gap: 5px;
+}
+
+a:hover {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 700;
+    color: rgb(226, 31, 5);
+}
+
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(25%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+    50% {
+          transform: translateY(25%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    50% {
+          transform: translateX(-15%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
